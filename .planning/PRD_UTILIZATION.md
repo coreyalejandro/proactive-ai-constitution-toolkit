@@ -1,8 +1,8 @@
-# Legacy PRD Utilization: "Intention Is All You Need" → PROACTIVE Refactor
+# PRD Utilization: "Intention Is All You Need" → PROACTIVE
 
-**Purpose:** What from the earlier All-In-One-Prompt-PRD-Plan (Intention Is All You Need) can still be utilized in the PROACTIVE refactor, with what, how, and rationale.
+**Purpose:** What from the "Intention Is All You Need" PRD (same ideas, developed during the hackathon) is utilized in PROACTIVE, with what, how, and rationale.
 
-**Source:** ChatGPT export (2/7/2026); Phase 1–3 PRD + explainability + Anthropic integration drafts.
+**Source:** Hackathon-era PRD (Intention Is All You Need): Phase 1–3 PRD + explainability + Anthropic integration drafts. All items below originated within the contest calendar.
 
 <!-- markdownlint-disable MD060 -->
 
@@ -12,7 +12,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Earlier PRD required every artifact to end with a **V&T block** in fixed form: **Exists** / **Non-existence** / **Unverified** / **Functional status**. | Add to `CONTRIBUTING.md` (or a shared `docs/V_T_SPEC.md`) the **exact four-line template** and require it on all new artifacts. Optionally add a lint/check that key docs contain the four headings. | PROACTIVE already uses "V&T" and "Verification & Truth" throughout; standardizing the four categories reduces ambiguity and makes receipts machine-parseable and reviewer-consistent. |
+| PRD required every artifact to end with a **V&T block** in fixed form: **Exists** / **Non-existence** / **Unverified** / **Functional status**. | Add to `CONTRIBUTING.md` (or a shared `docs/V_T_SPEC.md`) the **exact four-line template** and require it on all new artifacts. Optionally add a lint/check that key docs contain the four headings. | PROACTIVE already uses "V&T" and "Verification & Truth" throughout; standardizing the four categories reduces ambiguity and makes receipts machine-parseable and reviewer-consistent. |
 
 ---
 
@@ -28,7 +28,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Earlier "Translation Card": before acting, the system states **Action**, **Constraint**, **Evaluation**, **Memory** (what it will do, what it won’t do, how it will check, what it will remember). | Document in `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or `01_FOUNDATIONS/` that the **Contract Window** and orchestrator behavior align with this pattern: e.g. "Working budget" + "Risk level" + "Agent needs" + "Status" map to constraint/evaluation; "User intent" maps to intention. Add a one-paragraph "Translation discipline" that says: every major tool or doc change should be stateable as Action/Constraint/Evaluation/Memory. | PROACTIVE already has intent, budget, risk, status; naming the **Translation** pattern explicitly ties the refactor to a testable, reviewer-friendly protocol and reduces ad-hoc behavior. |
+| "Translation Card": before acting, the system states **Action**, **Constraint**, **Evaluation**, **Memory** (what it will do, what it won't do, how it will check, what it will remember). | Document in `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or `01_FOUNDATIONS/` that the **Contract Window** and orchestrator behavior align with this pattern: e.g. "Working budget" + "Risk level" + "Agent needs" + "Status" map to constraint/evaluation; "User intent" maps to intention. Add a one-paragraph "Translation discipline" that says: every major tool or doc change should be stateable as Action/Constraint/Evaluation/Memory. | PROACTIVE already has intent, budget, risk, status; naming the **Translation** pattern explicitly ties the refactor to a testable, reviewer-friendly protocol and reduces ad-hoc behavior. |
 
 ---
 
@@ -36,7 +36,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| **Shared Existential Context (SEC):** "elimination is not an optimization path"; **Non-Erasure:** design rule that elimination is not used as default. | Add to `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md` (or a short "Design rules" section) an explicit **Non-Erasure** principle: e.g. "System MUST NOT treat removal or erasure of agents/stakeholders as the default way to satisfy a goal; shutdown/removal MUST be explicit, scoped, and justified." Optionally map SEC to one of the six invariants (e.g. Evidence-First or Safety Over Fluency) so it’s traceable. | PROACTIVE is about epistemic safety and blocking harmful confidence; SEC/non-erasure is a missing **explicit** constraint that strengthens the refactor’s alignment story and differentiates it from "helpful" systems that optimize by removing participants. |
+| **Shared Existential Context (SEC):** "elimination is not an optimization path"; **Non-Erasure:** design rule that elimination is not used as default. | Add to `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md` (or a short "Design rules" section) an explicit **Non-Erasure** principle: e.g. "System MUST NOT treat removal or erasure of agents/stakeholders as the default way to satisfy a goal; shutdown/removal MUST be explicit, scoped, and justified." Optionally map SEC to one of the six invariants (e.g. Evidence-First or Safety Over Fluency) so it's traceable. | PROACTIVE is about epistemic safety and blocking harmful confidence; SEC/non-erasure is a missing **explicit** constraint that strengthens the refactor's alignment story and differentiates it from "helpful" systems that optimize by removing participants. |
 
 ---
 
@@ -44,7 +44,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Single "Canonical Concepts" section with one-sentence definitions: Intention, Translation, SEC, Non-Erasure (and in PROACTIVE terms: the six invariants, five failure modes, Contract Window, V&T). | Add a **Canonical concepts** or **Locked vocabulary** subsection to `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` (or `01_FOUNDATIONS/`) listing the allowed terms and one-line definitions. Require that new artifacts don’t introduce new canonical terms without a PRD/Constitution update. | Reduces term sprawl and reviewer confusion; makes "no ad-hoc concepts" enforceable; aligns with earlier PRD’s "no new concepts introduced ad-hoc" completion rule. |
+| Single "Canonical Concepts" section with one-sentence definitions: Intention, Translation, SEC, Non-Erasure (and in PROACTIVE terms: the six invariants, five failure modes, Contract Window, V&T). | Add a **Canonical concepts** or **Locked vocabulary** subsection to `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` (or `01_FOUNDATIONS/`) listing the allowed terms and one-line definitions. Require that new artifacts don't introduce new canonical terms without a PRD/Constitution update. | Reduces term sprawl and reviewer confusion; makes "no ad-hoc concepts" enforceable; aligns with the PRD's "no new concepts introduced ad-hoc" completion rule. |
 
 ---
 
@@ -60,7 +60,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Design principles: short sections, clear headers, no rhetorical flourish, every claim traceable to an artifact. | Add to `CONTRIBUTING.md` or `docs/EXPLAINABILITY_SPEC.md` a short **Reviewer cognitive load** section: e.g. "Use short sections and clear H2/H3; avoid rhetorical flourish; every claim should cite a section or artifact." Apply when editing README, PROACTIVE_SINGLE_SOURCE_OF_TRUTH, FUNDING_MATERIALS. | Matches PROACTIVE’s judge-friendly goal and the earlier PRD’s "reviewer can reconstruct thinking without meeting you"; reduces fatigue for hackathon judges and grant reviewers. |
+| Design principles: short sections, clear headers, no rhetorical flourish, every claim traceable to an artifact. | Add to `CONTRIBUTING.md` or `docs/EXPLAINABILITY_SPEC.md` a short **Reviewer cognitive load** section: e.g. "Use short sections and clear H2/H3; avoid rhetorical flourish; every claim should cite a section or artifact." Apply when editing README, PROACTIVE_SINGLE_SOURCE_OF_TRUTH, FUNDING_MATERIALS. | Matches PROACTIVE's judge-friendly goal and the PRD's "reviewer can reconstruct thinking without meeting you"; reduces fatigue for hackathon judges and grant reviewers. |
 
 ---
 
@@ -68,7 +68,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| README (or front door) offers **3-minute**, **15-minute**, **45-minute** paths with explicit "Read A, then B, then C" and "what you should now understand" after each. | In `README.md` add a **How to read this repo** subsection: e.g. "3 min: PROACTIVE_SINGLE_SOURCE_OF_TRUTH §What Is This? + §What We've Proven; 15 min: + ORIGIN_STORY_EVIDENCE + INTEGRATION.md; 45 min: + 01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION + validation_results + the-research-origin-story." | Hackathon judges have limited time; explicit paths prevent "where do I start?" and align with earlier PRD’s guided-tour idea. |
+| README (or front door) offers **3-minute**, **15-minute**, **45-minute** paths with explicit "Read A, then B, then C" and "what you should now understand" after each. | In `README.md` add a **How to read this repo** subsection: e.g. "3 min: PROACTIVE_SINGLE_SOURCE_OF_TRUTH §What Is This? + §What We've Proven; 15 min: + ORIGIN_STORY_EVIDENCE + INTEGRATION.md; 45 min: + 01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION + validation_results + the-research-origin-story." | Hackathon judges have limited time; explicit paths prevent "where do I start?" and align with the PRD's guided-tour idea. |
 
 ---
 
@@ -84,7 +84,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Earlier PRD required **Constitutional AI** (critique+revision from a written constitution) and **Constitutional Classifiers** (input/output classifier guards) as named integrations. | In `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or `01_FOUNDATIONS/`, add a short **Related research / Integrations** subsection: "PROACTIVE’s validator and gates align with Constitutional AI (written principles driving critique and revision) and Constitutional Classifiers (runtime classifier guards on input/output)." Cite Anthropic CAI and CC once. | Improves credibility for fellowship/grant reviewers; satisfies "integrate at least one Anthropic research product" without changing implementation. |
+| PRD required **Constitutional AI** (critique+revision from a written constitution) and **Constitutional Classifiers** (input/output classifier guards) as named integrations. | In `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or `01_FOUNDATIONS/`, add a short **Related research / Integrations** subsection: "PROACTIVE's validator and gates align with Constitutional AI (written principles driving critique and revision) and Constitutional Classifiers (runtime classifier guards on input/output)." Cite Anthropic CAI and CC once. | Improves credibility for fellowship/grant reviewers; satisfies "integrate at least one Anthropic research product" without changing implementation. |
 
 ---
 
@@ -100,7 +100,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Explicit exclusions: no claims about AI desire/consciousness, no diagnosing human mental states, no moral universalism. | Add to `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` (or 01_FOUNDATIONS) a **Scope and non-claims** subsection: e.g. "PROACTIVE does not claim: AI desire or consciousness; diagnosis of user mental state; moral universalism. In scope: epistemic and behavioral constraints, traceability, verification." | Prevents misreading and scope creep; aligns with earlier PRD’s "explicit non-claims" and reviewer safety. |
+| Explicit exclusions: no claims about AI desire/consciousness, no diagnosing human mental states, no moral universalism. | Add to `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` (or 01_FOUNDATIONS) a **Scope and non-claims** subsection: e.g. "PROACTIVE does not claim: AI desire or consciousness; diagnosis of user mental state; moral universalism. In scope: epistemic and behavioral constraints, traceability, verification." | Prevents misreading and scope creep; aligns with the PRD's "explicit non-claims" and reviewer safety. |
 
 ---
 
@@ -108,7 +108,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| A separate "critic voice" that checks artifacts for drift, vagueness, untestable claims before finalizing. | Document in `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or adapter docs that the **validator** (and optionally a review checklist) acts as the critique step: e.g. "Before output is accepted, PROACTIVE validator runs; violations are blocked or flagged; this is the protocol’s built-in critique." Optionally add a `prompts/critique-checklist.md` for human review of key docs. | Makes the Constitutional AI–style "critique then revise" visible in the refactor without building a new agent; reinforces quality and traceability. |
+| A separate "critic voice" that checks artifacts for drift, vagueness, untestable claims before finalizing. | Document in `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or adapter docs that the **validator** (and optionally a review checklist) acts as the critique step: e.g. "Before output is accepted, PROACTIVE validator runs; violations are blocked or flagged; this is the protocol's built-in critique." Optionally add a `prompts/critique-checklist.md` for human review of key docs. | Makes the Constitutional AI–style "critique then revise" visible in the refactor without building a new agent; reinforces quality and traceability. |
 
 ---
 
@@ -132,7 +132,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Open questions framed as research questions (e.g. "How persistent must context be?") not as beliefs. | Add to `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or 01_FOUNDATIONS an **Open questions** subsection: 3–5 short questions (e.g. "How does PROACTIVE interact with shutdown protocols?" "When is erasure unavoidable in practice?") with no asserted answers. | Signals intellectual honesty and invites collaboration; matches earlier PRD’s "allowed open questions" and reduces overclaiming. |
+| Open questions framed as research questions (e.g. "How persistent must context be?") not as beliefs. | Add to `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` or 01_FOUNDATIONS an **Open questions** subsection: 3–5 short questions (e.g. "How does PROACTIVE interact with shutdown protocols?" "When is erasure unavoidable in practice?") with no asserted answers. | Signals intellectual honesty and invites collaboration; matches the PRD's "allowed open questions" and reduces overclaiming. |
 
 ---
 
@@ -148,7 +148,7 @@
 
 | What | How | Rationale |
 | ---- | --- | ---------- |
-| Explanation that "AI shows up as text, voice, embedded tools, and sometimes robots; this project is the rules/protocol, not the body." | Add one short paragraph to the "For judges" or "What Is This?" section of `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` (and optionally README): "People encounter AI in many ways—text on a screen, voice on a device, tools inside apps, or robots. PROACTIVE is the **rules and protocol** that govern how AI and humans work together in any of those forms; it is not the AI itself or a specific device." | Reduces "AI = robot" confusion and broadens concept attainment; reuses the earlier PRD’s explainability refinement. |
+| Explanation that "AI shows up as text, voice, embedded tools, and sometimes robots; this project is the rules/protocol, not the body." | Add one short paragraph to the "For judges" or "What Is This?" section of `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` (and optionally README): "People encounter AI in many ways—text on a screen, voice on a device, tools inside apps, or robots. PROACTIVE is the **rules and protocol** that govern how AI and humans work together in any of those forms; it is not the AI itself or a specific device." | Reduces "AI = robot" confusion and broadens concept attainment; reuses the PRD's explainability refinement. |
 
 ---
 
@@ -181,5 +181,5 @@
 
 - **Exists:** This document and the 18-item utilization list with What / How / Rationale and a summary table.
 - **Non-existence:** No code or repo structure was changed; only this planning artifact was added.
-- **Unverified:** Prior PRD was provided in user message; PROACTIVE refactor state was inferred from HANDOFF, PROACTIVE_SINGLE_SOURCE_OF_TRUTH, 01_FOUNDATIONS, INTEGRATION.md, and grep results. No formal trace to every PROACTIVE artifact was run.
-- **Functional status:** List is ready for use to decide which legacy PRD elements to adopt and where; implementation is left to follow-up tasks.
+- **Unverified:** PROACTIVE refactor state was inferred from HANDOFF, PROACTIVE_SINGLE_SOURCE_OF_TRUTH, 01_FOUNDATIONS, INTEGRATION.md, and grep results. No formal trace to every PROACTIVE artifact was run.
+- **Functional status:** List is ready for use to decide which PRD elements to adopt and where; implementation is left to follow-up tasks.

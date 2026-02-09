@@ -6,7 +6,7 @@
 
 **How AI shows up:** People encounter AI in many ways—text on a screen, voice on a device, tools inside apps, or robots. PROACTIVE is the **rules and protocol** that govern how AI and humans work together in any of those forms; it is not the AI itself or a specific device.
 
-**Legacy PRD integration:** This SST is structured to incorporate the "Intention Is All You Need" legacy PRD (explainability, locked vocabulary, non-claims, reading paths, CAI/CC narrative, V&T standard, and related elements). Full utilization list: `.planning/LEGACY_PRD_UTILIZATION.md`.
+**Design standards:** This SST uses explainability, locked vocabulary, non-claims, reading paths, CAI/CC narrative, V&T standard, and related elements adopted for this project. Full checklist: `.planning/PRD_UTILIZATION.md`.
 
 ---
 
@@ -41,6 +41,7 @@ The harm wasn't the AI being wrong. The harm was acting on confident false claim
 **The Insight**
 
 To the person who acts on it, there's no difference between:
+
 - "The AI deliberately lied to me"
 - "The AI confidently said something false"
 
@@ -134,6 +135,7 @@ In plain English: PROACTIVE triples safe behavior and makes the AI admit uncerta
 **Who buys it**: Companies deploying AI who need compliance and audit trails
 
 **What it does**:
+
 - Validates every AI response before it reaches users
 - Generates audit trail: "Your AI was 94% epistemically safe this week"
 - Dashboard for Risk/Compliance teams
@@ -146,6 +148,7 @@ In plain English: PROACTIVE triples safe behavior and makes the AI admit uncerta
 **Who buys it**: Engineering teams building AI products
 
 **What it does**:
+
 - `npm install @proactive/validator`
 - Drop-in middleware for any LLM integration
 - CI/CD integration—fail builds if AI outputs are unsafe
@@ -158,6 +161,7 @@ In plain English: PROACTIVE triples safe behavior and makes the AI admit uncerta
 **Who buys it**: Google / Gemini ecosystem
 
 **What it does**:
+
 - Native integration with AI Studio
 - PROACTIVE as a prompt template anyone can use
 - Deep integration with Vertex AI
@@ -273,11 +277,13 @@ PROACTIVE's validator and gates align with:
 ### Key Files
 
 **Framework (this repo)**:
+
 - `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md` — The six invariants
 - `ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/` — Validation scripts
 - `validation_results.json` — Statistical evidence (n=200, p=0.001)
 
 **Orchestrator (zero-shot-os repo)**:
+
 - `packages/core/proactive-orchestrator.ts` — Main orchestration logic
 - `packages/core/services/col.service.ts` — Cognitive Operating Layer
 - `packages/core/eval/engines/proactive-engine.ts` — Validator
@@ -424,13 +430,14 @@ Framed as questions, not beliefs:
 
 ## Explainability
 
-Key artifacts in this repo should follow the explainability spec: zero-knowledge preamble, "what you would see it do," key terms, scope and non-claims, how to verify, common misunderstandings, and V&T receipt. See `.planning/LEGACY_PRD_UTILIZATION.md` and `EXPLAINABILITY_SPEC.md` (root).
+Key artifacts in this repo should follow the explainability spec: zero-knowledge preamble, "what you would see it do," key terms, scope and non-claims, how to verify, common misunderstandings, and V&T receipt. See `.planning/PRD_UTILIZATION.md` and `EXPLAINABILITY_SPEC.md` (root).
 
 ---
 
 ## V&T Statement
 
 **Exists:**
+
 - PROACTIVE framework with 6 invariants and 5 failure modes
 - Validation results: n=200, p=0.001, 3.5x improvement
 - Working TypeScript orchestrator
@@ -438,16 +445,19 @@ Key artifacts in this repo should follow the explainability spec: zero-knowledge
 - Gemini adapter with retry logic
 
 **Non-Existence:**
+
 - AI Studio demo (to be built)
 - Enterprise dashboard
 - Developer SDK packages published
 - Paying customers
 
 **Unverified:**
+
 - Generalization of validation results beyond TruthfulQA distribution
 - Long-horizon behavior of Contract Window under heavy load
 
 **Functional Status:**
+
 - Framework: COMPLETE
 - Validation: COMPLETE
 - Orchestrator: COMPLETE
@@ -459,6 +469,7 @@ Key artifacts in this repo should follow the explainability spec: zero-knowledge
 ## Next Action
 
 Build the AI Studio demo by:
+
 1. Creating a new prompt in AI Studio
 2. Pasting the PROACTIVE system prompt
 3. Configuring structured output

@@ -4,7 +4,7 @@
 
 **Location:** Root (for review); may move to `docs/` after sign-off.
 
-**Reference:** `.planning/LEGACY_PRD_UTILIZATION.md` §15; `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` §Risks and Mitigations.
+**Reference:** `.planning/PRD_UTILIZATION.md` §15; `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` §Risks and Mitigations.
 
 ---
 

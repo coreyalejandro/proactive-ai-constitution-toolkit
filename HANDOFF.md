@@ -1,7 +1,7 @@
 # 🚀 Agent Handoff: PROACTIVE AI Constitution Toolkit
 
-**Date:** 2026-02-07  
-**Status:** Executing refactored plan — no substitute; deadline or not, we ship this.
+**Date:** 2026-02-08  
+**Status:** Phase 1 and Phase 2 sign-offs complete; safety case generated (Phase 3 output). **8-hour build plan:** `.planning/EIGHT_HOUR_BUILD.md` — repo → demo script → video → submission.
 
 ---
 
@@ -22,19 +22,21 @@ Everything else supports this. We execute the refactored plan: adapter-first ver
   - **1.1** `04_FORMAL_SPECIFICATION/TRACEABILITY_ONTOLOGY.md` added; canonical MBSE trace log schema = `ADAPTER_MODULES/01_WANDB_TRACE_ADAPTER/schema.json`.
   - **1.2** `05_EVALUATION_DESIGN/EVALUATION_PLAN_PREREGISTERED.md`: §3.3 **Forensic Trace Challenge** added (task, Root Cause Attribution Accuracy, Log Completeness, H4 link, adapter ref).
   - **1.4** 01_WANDB USE_CASE_EVIDENCE verified: pilot N=9, 52% time reduction, 100% accuracy, quantitative/qualitative documented.
-  - **1.5** SIGN-OFF (first publishable unit) still pending product/lead.
-- **Markdownlint in LEGACY_PRD_UTILIZATION.md:** MD060 disabled file-level; section 4 separator fixed; escaped pipes in two "How" cells (MD056); Summary Table header aligned.
-- **SST prepared for legacy PRD integration** (`PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`):
-  - Added "How AI shows up" (multimodal: text/voice/tools/robot) and pointer to `.planning/LEGACY_PRD_UTILIZATION.md`
+  - **1.5** SIGN-OFF (first publishable unit) complete — product/lead 2026-02-08; human read-through per READ_THROUGH_RESULTS.md.
+  - **Phase 2 rigor:** 2.3 (02_CI THEORY_OF_ACTION) and 2.6 (03_HELM benchmark comparison) SIGN-OFF complete — product/lead 2026-02-08.
+- **Safety case generated** (Phase 3 output): content in `09_SAFETY_CASE/` (SAFETY_CASE_SKELETON.md with adapter evidence). Tracker updated in REFACTORED_PLAN_EXECUTION.md (3.2, 3.5).
+- **Markdownlint in PRD_UTILIZATION.md:** MD060 disabled file-level; section 4 separator fixed; escaped pipes in two "How" cells (MD056); Summary Table header aligned.
+- **SST prepared for PRD integration** (`PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`):
+  - Added "How AI shows up" (multimodal: text/voice/tools/robot) and pointer to `.planning/PRD_UTILIZATION.md`
   - Time-bounded reading paths (3 / 15 / 45 min)
   - Canonical concepts (locked vocabulary), Scope and non-claims, Non-Erasure design rule, Translation discipline
   - Related research (Constitutional AI, Constitutional Classifiers), Product Hook, Drift and refusal, Critique step
   - Open questions, Risks and mitigations, Explainability pointer, V&T standardized (Exists / Non-Existence / Unverified / Functional status)
-- **Legacy PRD utilization list** (`.planning/LEGACY_PRD_UTILIZATION.md`): 18 items with What / How / Rationale for integrating "Intention Is All You Need" into PROACTIVE
+- **PRD utilization list** (`.planning/PRD_UTILIZATION.md`): 18 items with What / How / Rationale for integrating "Intention Is All You Need" (hackathon-era PRD) into PROACTIVE
 - **Explainability spec and claim–evidence map in root (for review):**
   - `EXPLAINABILITY_SPEC.md` — Required seven-section structure, reviewer cognitive load, V&T template
   - `CLAIM_EVIDENCE_MAP.md` — Claim → Artifact § Section → Evidence → Phrasing note (12 main hackathon/VC claims)
-- **Read-through setup** (`READ_THROUGH.md`): Instructions for human + code assistant. **Code-assistant flow executed** (all 6 steps Pass); results + **time-boxed human run sheet** (≈15 min) in `READ_THROUGH_RESULTS.md`. Human pass: run the sheet in READ_THROUGH_RESULTS, fill sign-off, then both flows are complete.
+- **Read-through** (`READ_THROUGH.md`): **Both flows complete** — code-assistant (all 6 steps Pass) and human (Corey Alejandro, 2026-02-08, Pass). Results in `READ_THROUGH_RESULTS.md`.
 - **SST references** updated from `docs/` to root: `EXPLAINABILITY_SPEC.md`, `CLAIM_EVIDENCE_MAP.md`
 - **Interactive simulations in research visualization** (judge-friendly, anyone can understand):
   - BamboozleSimulator (Genesis): Without vs With PROACTIVE step-through when AI says "Done" but didn't do it
@@ -100,7 +102,8 @@ Everything else supports this. We execute the refactored plan: adapter-first ver
 ## 🎯 Recommended Next Steps (Refactored plan first)
 
 1. **Execute refactored plan** (canonical)
-   - Work from `REFACTORED_PLAN_EXECUTION.md`: Phase 1 closure (TRACEABILITY_ONTOLOGY or equivalent, Forensic Trace in EVALUATION_PLAN, 01_WANDB validation gate sign-off) → Phase 2 verification (02_CI, 03_HELM USE_CASE_EVIDENCE + rigor) → Phase 3: create `ADAPTER_MODULES/04_SAFETY_CASE_GENERATOR/`, auto-populate SAFETY_CASE_FULL.md, PROACTIVE Safety Appendix.
+  - Work from `REFACTORED_PLAN_EXECUTION.md`: Phase 1 and Phase 2 sign-offs complete (1.5, 2.3, 2.6 — 2026-02-08). **Safety case generated** (Phase 3 output; content in `09_SAFETY_CASE/`). Optional: 04_SAFETY_CASE_GENERATOR automation, validation gate 3.4, PROACTIVE Safety Appendix.
+  - **Sign-offs:** 1.5, 2.3, 2.6 complete (product/lead 2026-02-08). Steps documented in `.planning/SIGN_OFF_STEPS.md`.
    - No substitute; deadline or not, we ship this plan.
 
 2. **Build AI Studio Demo** (if time after plan progress)
@@ -170,11 +173,11 @@ npx tsx demo/hackathon-demo.ts
 - **`REFACTORED_PROACTIVE_AI_CONSTITUTION_TOOLKIT.md`** — **CANONICAL PLAN** (adapter-first vertical slices, phases 1–3, validation gates, vertical slice examples, personas, template integrations). This is what we're building.
 - **`REFACTORED_PLAN_EXECUTION.md`** — Execution tracker: Phase 1–3 deliverables, validation gates, status, next actions.
 - `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md` - Plain English PRD (supports plan; reading paths, canonical concepts, non-claims)
-- `.planning/LEGACY_PRD_UTILIZATION.md` - What from "Intention Is All You Need" to use in PROACTIVE (What / How / Rationale)
+- `.planning/PRD_UTILIZATION.md` - What from "Intention Is All You Need" (hackathon-era PRD) to use in PROACTIVE (What / How / Rationale)
 - `EXPLAINABILITY_SPEC.md` (root) - Mandatory explainability structure for key artifacts; V&T template
 - `CLAIM_EVIDENCE_MAP.md` (root) - Claim → evidence map for pitch/hackathon; phrasing notes
 - `READ_THROUGH.md` (root) - Read-through procedure: human reviewer + code assistant instructions
-- `READ_THROUGH_RESULTS.md` (root) - **Code-assistant run complete (Pass)**; time-boxed human run sheet (≈15 min) — execute human steps and fill sign-off
+- `READ_THROUGH_RESULTS.md` (root) - **Both runs complete (Pass):** code-assistant + human (Corey Alejandro, 2026-02-08)
 - `ORIGIN_STORY_EVIDENCE.md` - Concrete Jan 2026 incident (phantom completion, blind spots, rigged protocol)
 - `the-research-origin-story/` - **Origin story visualization** (magazine app: Genesis, Chronicle, Invariants, PROACTIVE); see `INTEGRATION.md` for pitch/demo use
 - `ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/validation_results.json` - Statistical evidence
@@ -196,5 +199,5 @@ npx tsx demo/hackathon-demo.ts
 ---
 
 **Status:** Executing refactored plan; no substitute.  
-**Recommendation:** Work from REFACTORED_PLAN_EXECUTION.md — close Phase 1, verify Phase 2, start Phase 3 (04_SAFETY_CASE_GENERATOR). Then AI Studio demo / video / pitch if time.  
+**Recommendation:** Work from REFACTORED_PLAN_EXECUTION.md — Phase 1 and Phase 2 complete; safety case generated (09_SAFETY_CASE/). Optional: 04_SAFETY_CASE_GENERATOR automation, validation gate 3.4. Then AI Studio demo / video / pitch if time.  
 **Confidence:** High — plan is clear; adapters 01–03 exist; 04 and full synthesis remain.

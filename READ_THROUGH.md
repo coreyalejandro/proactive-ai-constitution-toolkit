@@ -51,7 +51,7 @@
 **Steps (in order):**
 
 1. **Reference resolution**  
-   - In `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`, find every reference to `EXPLAINABILITY_SPEC`, `CLAIM_EVIDENCE_MAP`, `LEGACY_PRD_UTILIZATION`, and `docs/` paths.  
+   - In `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`, find every reference to `EXPLAINABILITY_SPEC`, `CLAIM_EVIDENCE_MAP`, `PRD_UTILIZATION`, and `docs/` paths.  
    - **Check:** Each reference points to an existing file (root or `.planning/`).  
    - **Report:** Any broken path or reference to a file that does not exist.
 

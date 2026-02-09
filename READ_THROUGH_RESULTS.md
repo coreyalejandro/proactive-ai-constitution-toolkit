@@ -21,7 +21,7 @@ You do **not** need to run any code or scripts. The code assistant part is alrea
 
 | Step | Result | Report |
 |------|--------|--------|
-| 1. Reference resolution | **Pass** | In `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`: `.planning/LEGACY_PRD_UTILIZATION.md` exists; `CLAIM_EVIDENCE_MAP.md` (root) exists; `EXPLAINABILITY_SPEC.md` (root) exists. No `docs/` paths in SST; all refs resolve. |
+| 1. Reference resolution | **Pass** | In `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`: `.planning/PRD_UTILIZATION.md` exists; `CLAIM_EVIDENCE_MAP.md` (root) exists; `EXPLAINABILITY_SPEC.md` (root) exists. No `docs/` paths in SST; all refs resolve. |
 | 2. Explainability spec structure | **Pass** | `EXPLAINABILITY_SPEC.md` contains all seven required section titles in order: (1) What this is, (2) What you would see it do, (3) Key terms, (4) Scope and non-claims, (5) How to verify, (6) Common misunderstandings, (7) V&T receipt. |
 | 3. V&T template | **Pass** | V&T receipt template in `EXPLAINABILITY_SPEC.md` contains exactly four headings: **Exists**, **Non-Existence**, **Unverified**, **Functional Status**. |
 | 4. Claim–evidence map table | **Pass** | Table has columns: Claim \| Artifact § Section \| Evidence \| Phrasing note. All 12 rows reference resolvable artifacts: PROACTIVE_SINGLE_SOURCE_OF_TRUTH sections exist; `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md` exists; `ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/validation_results.json` exists. |
@@ -36,42 +36,42 @@ You do **not** need to run any code or scripts. The code assistant part is alrea
 
 ### Step 1 — 3 min
 
-- [ ] Open `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`. Read **only** §What Is This? and §What We've Proven.
-- [ ] **Check:** Can you state in one sentence what PROACTIVE is and what was proven? (Write it here or say it out loud.)
+- [x] Open `PROACTIVE_SINGLE_SOURCE_OF_TRUTH.md`. Read **only** §What Is This? and §What We've Proven.
+- [x] **Check:** Can you state in one sentence what PROACTIVE is and what was proven? (Write it here or say it out loud.) PROACTIVE is a safety monitoring tool that mitigates against AI making claims it cannot prove; it allows evidence-backed checking before confident output.
 - [ ] **Note any confusion:** _______________________________________________
 
 ### Step 2 — 3 min
 
-- [ ] Open `EXPLAINABILITY_SPEC.md`. Scan sections 1–7.
-- [ ] **Check:** Is each section clearly described? Would you know how to apply this to a new adapter README?
+- [x] Open `EXPLAINABILITY_SPEC.md`. Scan sections 1–7.
+- [x] **Check:** Is each section clearly described? Would you know how to apply this to a new adapter README? Yes.
 - [ ] **Note missing/ambiguous:** _______________________________________________
 
 ### Step 3 — 4 min
 
-- [ ] Open `CLAIM_EVIDENCE_MAP.md`. For 3–4 rows, try to locate the Artifact § Section in the repo.
-- [ ] **Check:** Can you find the section? Does the Phrasing note make sense?
+- [x] Open `CLAIM_EVIDENCE_MAP.md`. For 3–4 rows, try to locate the Artifact § Section in the repo.
+- [x] **Check:** Can you find the section? Does the Phrasing note make sense? Yes.
 - [ ] **Note claim in pitch/funding not in map:** _______________________________________________
 
 ### Step 4 — 2 min
 
-- [ ] Skim PROACTIVE_SINGLE_SOURCE_OF_TRUTH for: Canonical concepts, Scope and non-claims, Open questions, Risks and mitigations.
-- [ ] **Check:** Same terms as EXPLAINABILITY_SPEC and CLAIM_EVIDENCE_MAP (V&T, Non-Erasure)?
+- [x] Skim PROACTIVE_SINGLE_SOURCE_OF_TRUTH for: Canonical concepts, Scope and non-claims, Open questions, Risks and mitigations.
+- [x] **Check:** Same terms as EXPLAINABILITY_SPEC and CLAIM_EVIDENCE_MAP (V&T, Non-Erasure)? Yes.
 - [ ] **Note inconsistencies:** _______________________________________________
 
 ### Step 5 — Sign-off
 
-- [ ] **Satisfied:** Human read-through complete — [date]. Caveats: _______________________________________________
+- [x] **Satisfied:** Human read-through complete — 2026-02-08. Caveats: None.
 - [ ] **Not satisfied — blocking issues (file + section or row):** _______________________________________________
 
 ---
 
 ## Human reviewer result (fill in after run)
 
-**Completed by:** _________________ **Date:** _________________
+**Completed by:** Corey Alejandro **Date:** 2026-02-08
 
-**Result:** ☐ Pass (with caveats)  ☐ Fail (blocking issues listed above)
+**Result:** ☑ Pass (with caveats)  ☐ Fail (blocking issues listed above)
 
-**Blocking issues to fix:** _______________________________________________
+**Blocking issues to fix:** None.
 
 ---
 
@@ -84,10 +84,10 @@ You do **not** need to run any code or scripts. The code assistant part is alrea
 
 ## V&T Statement
 
-**Exists:** Code assistant run completed (all 6 steps Pass); human run sheet provided for execution.
+**Exists:** Code assistant run completed (all 6 steps Pass); human run completed (Corey Alejandro, 2026-02-08, Pass with caveats). Both flows complete.
 
-**Non-Existence:** Human run not yet completed; no fix list applied.
+**Non-Existence:** None.
 
-**Unverified:** Human pass not yet performed; 24h execution in progress.
+**Unverified:** None for read-through; human and code-assistant runs recorded.
 
-**Functional Status:** Code-assistant flow complete. Human flow ready to execute via run sheet above.
+**Functional Status:** Both human and code-assistant read-through complete. Root artifacts ready to keep in root or move to `docs/` and update refs.

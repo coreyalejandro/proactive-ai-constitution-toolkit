@@ -2,7 +2,7 @@
 
 **Purpose:** Mandatory structure for key artifacts so reviewers (judges, grant readers, neurodiverse users) get consistent, low-cognitive-load entry points. No jargon required.
 
-**Applies to:** New and updated key artifacts (adapter READMEs, FUNDING_MATERIALS, PRD sections, origin story copy). Reference: `.planning/LEGACY_PRD_UTILIZATION.md` §2.
+**Applies to:** New and updated key artifacts (adapter READMEs, FUNDING_MATERIALS, PRD sections, origin story copy). Reference: `.planning/PRD_UTILIZATION.md` §2.
 
 **Location:** Root (for review); may move to `docs/` after sign-off.
 
