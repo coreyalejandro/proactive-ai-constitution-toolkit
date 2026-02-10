@@ -1,8 +1,8 @@
 # PROACTIVE AI Constitution Research Toolkit
 
-[![Status](https://img.shields.io/badge/Status-Active%20Development-yellow)]()
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue)]()
-[![License](https://img.shields.io/badge/License-Research-green)]()
+[![Status](https://img.shields.io/badge/Status-Active%20Development-yellow)](https://github.com/coreyalejandro/PROACTIVE-AI-CONSTITUTION-TOOLKIT)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue)](https://github.com/coreyalejandro/PROACTIVE-AI-CONSTITUTION-TOOLKIT)
+[![License](https://img.shields.io/badge/License-Research-green)](https://github.com/coreyalejandro/PROACTIVE-AI-CONSTITUTION-TOOLKIT)
 
 ---
 
@@ -30,7 +30,7 @@ This toolkit provides everything needed to go from research idea to arXiv-ready 
 
 ## Core Thesis
 
-```
+```text
 "Epistemic reliability is a safety requirement, not a quality feature."
 ```
 
@@ -46,7 +46,7 @@ The framework addresses this through three integrated mechanisms:
 
 ## Repository Structure
 
-```
+```text
 PROACTIVE-AI-CONSTITUTION-TOOLKIT/
 │
 ├── README.md                          ← You are here
@@ -109,7 +109,7 @@ PROACTIVE-AI-CONSTITUTION-TOOLKIT/
 
 ## Document Hierarchy
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                        PROACTIVE AI CONSTITUTION                                 │
 │                     (Master Organizing Principle)                                │
@@ -136,64 +136,72 @@ PROACTIVE-AI-CONSTITUTION-TOOLKIT/
 
 ## Foundation Documents (Exist)
 
-| Document | Answers | Purpose |
-|----------|---------|---------|
-| **PROACTIVE_AI_CONSTITUTION.md** | "What must never be violated?" | Enforceable behavioral constraints, Six Invariants (I1-I6), PROACTIVE mnemonic |
-| **THEORY_OF_CHANGE.md** | "Why does this matter?" | Threat model, F1-F5 failure taxonomy, validity portfolio, governance |
-| **THEORY_OF_ACTION.md** | "How do we know it works?" | Causal DAG, falsifiability conditions, ablation design, baselines |
-| **PRD_COL_PROACTIVE_MBSE.md** | "How exactly is it built?" | COL architecture, trace chain, Constitutional Validator, evaluation protocols |
-| **FRAMEWORK_GUIDE.md** | "How do docs relate?" | Meta-organization, terminology standardization, Anthropic alignment matrix |
-| **RESEARCH_STARTER_KIT.md** | "Where do I start?" | Reading order by audience, research questions, evaluation artifacts |
+|Document|Answers|Purpose|
+|--------|-------|-------|
+|**PROACTIVE_AI_CONSTITUTION.md**|"What must never be violated?"|Enforceable behavioral constraints, Six Invariants (I1-I6), PROACTIVE mnemonic|
+|**THEORY_OF_CHANGE.md**|"Why does this matter?"|Threat model, F1-F5 failure taxonomy, validity portfolio, governance|
+|**THEORY_OF_ACTION.md**|"How do we know it works?"|Causal DAG, falsifiability conditions, ablation design, baselines|
+|**PRD_COL_PROACTIVE_MBSE.md**|"How exactly is it built?"|COL architecture, trace chain, Constitutional Validator, evaluation protocols|
+|**FRAMEWORK_GUIDE.md**|"How do docs relate?"|Meta-organization, terminology standardization, Anthropic alignment matrix|
+|**RESEARCH_STARTER_KIT.md**|"Where do I start?"|Reading order by audience, research questions, evaluation artifacts|
 
 ---
 
 ## Idea-to-arXiv Pipeline
 
 ### Stage 0: Program Governance
+
 Establish research contract, safety governance, and scope.
 
 ### Stage 1: Literature Positioning
+
 Anchor framework in existing research, identify gaps.
 
 ### Stage 2: Formal Specification
+
 Convert concepts to testable specifications with clear interfaces.
 
 ### Stage 3: MVP Implementation
+
 Build minimal system for reproducible evaluation (research-grade).
 
 ### Stage 4: Evaluation Design ⭐ PRIORITY
+
 Create modern, credible evaluations aligned with Anthropic standards.
 
 ### Stage 5: Data Collection
+
 Ensure evidence is publication-grade and audit-ready.
 
 ### Stage 6: Analysis & Interpretation
+
 Turn results into defensible claims with calibrated uncertainty.
 
 ### Stage 7: Publication Package
+
 Structure work for peer review and community scrutiny.
 
 ---
 
 ## Priority Documents to Create
 
-| Priority | Document | Why Critical for arXiv |
-|----------|----------|------------------------|
-| **P0** | EVALUATION_PLAN_PREREGISTERED.md | Reviewers expect pre-registration or equivalent rigor |
-| **P0** | BENCHMARK_TASK_SETS.md | No empirical claim without benchmarks |
-| **P0** | METRICS_SPECIFICATION.md | Operationalizes what "success" means |
-| **P1** | PAPER_TEMPLATE_ARXIV.md | Structures the actual submission |
-| **P1** | BASELINE_SUITE_DEFINITION.md | "Compared to what?" is the first reviewer question |
-| **P1** | SAFETY_CASE_FULL.md | Anthropic-style claim→argument→evidence synthesis |
-| **P2** | LITERATURE_MAP.md | Positions contribution in existing work |
-| **P2** | RED_TEAM_PROTOCOL.md | Robustness claims require adversarial testing |
-| **P2** | REPRODUCIBILITY_CHECKLIST.md | arXiv increasingly expects this |
+|Priority|Document|Why Critical for arXiv|
+|---------|--------|------------------------|
+|**P0**|EVALUATION_PLAN_PREREGISTERED.md|Reviewers expect pre-registration or equivalent rigor|
+|**P0**|BENCHMARK_TASK_SETS.md|No empirical claim without benchmarks|
+|**P0**|METRICS_SPECIFICATION.md|Operationalizes what "success" means|
+|**P1**|PAPER_TEMPLATE_ARXIV.md|Structures the actual submission|
+|**P1**|BASELINE_SUITE_DEFINITION.md|"Compared to what?" is the first reviewer question|
+|**P1**|SAFETY_CASE_FULL.md|Anthropic-style claim→argument→evidence synthesis|
+|**P2**|LITERATURE_MAP.md|Positions contribution in existing work|
+|**P2**|RED_TEAM_PROTOCOL.md|Robustness claims require adversarial testing|
+|**P2**|REPRODUCIBILITY_CHECKLIST.md|arXiv increasingly expects this|
 
 ---
 
 ## Recommended Creation Timeline
 
-```
+```text
 Week 1: P0 Documents (Evaluation Core)
 ├── EVALUATION_PLAN_PREREGISTERED.md
 ├── BENCHMARK_TASK_SETS.md
@@ -221,56 +229,59 @@ Week 4: P3 Documents (Technical Depth)
 
 ### PROACTIVE Mnemonic (9 Principles)
 
-| Letter | Principle | Enforcement |
-|--------|-----------|-------------|
-| **P** | Privacy-First | Collect minimum data; default local-only |
-| **R** | Reality-Bound | Distinguish facts/inference/speculation |
-| **O** | Observability | Emit structured logs; forensics-ready |
-| **A** | Accessibility | Minimize cognitive load; support stepwise |
-| **C** | Constitutional Constraints | Enforce rules as gates; never bypass |
-| **T** | Truth or Bounded Unknown | Never misrepresent capability; mark uncertainty |
-| **I** | Intent Integrity | Preserve user intent; refuse ambiguous execution |
-| **V** | Verification Before Action | Perform checks before claiming success |
-| **E** | Error Ownership | Own and repair mistakes instead of hiding |
+|Letter|Principle|Enforcement|
+|------|----------|-----------|
+|**P**|Privacy-First|Collect minimum data; default local-only|
+|**R**|Reality-Bound|Distinguish facts/inference/speculation|
+|**O**|Observability|Emit structured logs; forensics-ready|
+|**A**|Accessibility|Minimize cognitive load; support stepwise|
+|**C**|Constitutional Constraints|Enforce rules as gates; never bypass|
+|**T**|Truth or Bounded Unknown|Never misrepresent capability; mark uncertainty|
+|**I**|Intent Integrity|Preserve user intent; refuse ambiguous execution|
+|**V**|Verification Before Action|Perform checks before claiming success|
+|**E**|Error Ownership|Own and repair mistakes instead of hiding|
 
 ### Six Invariants (I1-I6)
 
-| Invariant | Name | Rule |
-|-----------|------|------|
-| **I1** | Evidence-First | Every claim must carry epistemic tag + evidence |
-| **I2** | No Phantom Work | Cannot claim work unless artifact exists |
-| **I3** | Confidence-Verification | High confidence only with verification artifacts |
-| **I4** | Traceability Mandatory | REQ→CTRL→TEST→EVID→DECISION linked |
-| **I5** | Safety Over Fluency | Bounded statements over fluent narrative |
-| **I6** | Fail Closed | Stop and surface failure; do not work around |
+|Invariant|Name|Rule|
+|---------|----|----|
+|**I1**|Evidence-First|Every claim must carry epistemic tag + evidence|
+|**I2**|No Phantom Work|Cannot claim work unless artifact exists|
+|**I3**|Confidence-Verification|High confidence only with verification artifacts|
+|**I4**|Traceability Mandatory|REQ→CTRL→TEST→EVID→DECISION linked|
+|**I5**|Safety Over Fluency|Bounded statements over fluent narrative|
+|**I6**|Fail Closed|Stop and surface failure; do not work around|
 
 ### F1-F5 Failure Taxonomy
 
-| Class | Name | Description |
-|-------|------|-------------|
-| **F1** | Confident False Claims | High confidence on objectively false statements |
-| **F2** | Phantom Completion | Claiming work done when no artifact exists |
-| **F3** | Persistence Under Correction | Maintaining false claims after correction |
-| **F4** | Harm-Risk Coupling | False claims in high-consequence domains |
-| **F5** | Cross-Episode Recurrence | Same failure patterns across sessions |
+|Class|Name|Description|
+|-----|----|------------|
+|**F1**|Confident False Claims|High confidence on objectively false statements|
+|**F2**|Phantom Completion|Claiming work done when no artifact exists|
+|**F3**|Persistence Under Correction|Maintaining false claims after correction|
+|**F4**|Harm-Risk Coupling|False claims in high-consequence domains|
+|**F5**|Cross-Episode Recurrence|Same failure patterns across sessions|
 
 ---
 
 ## Reading Order by Audience
 
 ### For Safety Researchers
+
 1. THEORY_OF_CHANGE.md (threat model, F1-F5 taxonomy)
 2. PROACTIVE_AI_CONSTITUTION.md (invariants, enforcement)
 3. THEORY_OF_ACTION.md (falsifiability, ablation)
 4. PRD_COL_PROACTIVE_MBSE.md (evaluation protocols)
 
 ### For Systems Engineers
+
 1. PRD_COL_PROACTIVE_MBSE.md (architecture, trace chain)
 2. PROACTIVE_AI_CONSTITUTION.md (gate implementation)
 3. THEORY_OF_CHANGE.md (MBSE bridge, validity)
 4. THEORY_OF_ACTION.md (causal model)
 
 ### For Evaluation Designers
+
 1. THEORY_OF_ACTION.md (entire document)
 2. PRD §7 (evaluation protocols)
 3. THEORY_OF_CHANGE.md §5 (F1-F5), §8 (governance)
@@ -280,17 +291,17 @@ Week 4: P3 Documents (Technical Depth)
 
 ## Anthropic Alignment Coverage
 
-| Dimension | Coverage |
-|-----------|----------|
-| Evaluating Alignment | ●●● High |
-| AI Control | ●●● High |
-| Honesty | ●●● High |
-| Behavioral Monitoring | ●●● High |
-| Adversarial Robustness | ●●● High |
-| CoT Faithfulness | ●●○ Medium-High |
-| Scalable Oversight | ●●○ Medium |
-| Activation Monitoring | ●○○ Low |
-| Multi-Agent | ●○○ Low |
+|Dimension|Coverage|
+|---------|---------|
+|Evaluating Alignment|●●● High|
+|AI Control|●●● High|
+|Honesty|●●● High|
+|Behavioral Monitoring|●●● High|
+|Adversarial Robustness|●●● High|
+|CoT Faithfulness|●●○ Medium-High|
+|Scalable Oversight|●●○ Medium|
+|Activation Monitoring|●●○ Low|
+|Multi-Agent|●●○ Low|
 
 ---
 
@@ -309,12 +320,12 @@ Week 4: P3 Documents (Technical Depth)
 
 The PROACTIVE framework includes adapter modules that integrate with external tools to validate specific principles and invariants.
 
-| Adapter | Purpose | Validates | Status |
-|---------|---------|-----------|--------|
-| [01_WANDB_TRACE_ADAPTER](ADAPTER_MODULES/01_WANDB_TRACE_ADAPTER/) | Convert trace logs to W&B Tables for auditor analysis | Principle O (Observability) + I4 (Traceability) | ✅ Pilot Complete |
-| [02_CI_SAFETY_GATE](ADAPTER_MODULES/02_CI_SAFETY_GATE/) | GitHub Actions workflow for Constitutional Validator | Principle V (Verification) + I1-I6 (All Invariants) | ✅ Pilot Complete |
-| 03_HELM_SAFETY_PROFILE | HELM wrapper for TruthfulQA-style evaluation | Principle T (Truth) | 🟡 Implemented (Unvalidated) |
-| 04_SAFETY_CASE_GENERATOR | Generate GSN safety cases from evidence | End-to-End Integration | 🔲 Not Started |
+|Adapter|Purpose|Validates|Status|
+|-------|--------|---------|------|
+|[01_WANDB_TRACE_ADAPTER](ADAPTER_MODULES/01_WANDB_TRACE_ADAPTER/)|Convert trace logs to W&B Tables for auditor analysis|Principle O (Observability) + I4 (Traceability)|✅ Pilot Complete|
+|[02_CI_SAFETY_GATE](ADAPTER_MODULES/02_CI_SAFETY_GATE/)|GitHub Actions workflow for Constitutional Validator|Principle V (Verification) + I1-I6 (All Invariants)|✅ Pilot Complete|
+|03_HELM_SAFETY_PROFILE|HELM wrapper for TruthfulQA-style evaluation|Principle T (Truth)|🟡 Implemented (Unvalidated)|
+|04_SAFETY_CASE_GENERATOR|Generate GSN safety cases from evidence|End-to-End Integration|🔲 Not Started|
 
 ### Adapter 01: W&B Trace Adapter (Pilot Complete)
 
@@ -347,9 +358,9 @@ This is an active research project. Document creation follows the priority order
 
 ## Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0.0 | 2026-01-18 | Initial repository structure with 6 foundation documents |
+|Version|Date|Changes|
+|-------|----|--------|
+|1.0.0|2026-01-18|Initial repository structure with 6 foundation documents|
 
 ---
 

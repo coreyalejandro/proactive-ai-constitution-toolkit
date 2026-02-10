@@ -10,13 +10,13 @@
 
 ## Phase 1: Foundation & First Integrated Slice (Weeks 1–2)
 
-| # | Deliverable | Status | Notes |
+|#|Deliverable|Status|Notes|
 |---|-------------|--------|-------|
-| 1.1 | `04_FORMAL_SPECIFICATION/TRACEABILITY_ONTOLOGY.md` — minimal, streamable JSON schema for MBSE Trace Log | ✅ DONE | TRACEABILITY_ONTOLOGY.md added; canonical schema = `01_WANDB_TRACE_ADAPTER/schema.json`. |
-| 1.2 | `05_EVALUATION_DESIGN/EVALUATION_PLAN_PREREGISTERED.md` focused on **Forensic Trace Challenge** benchmark | ✅ DONE | §3.3 Forensic Trace Challenge added; task, primary/secondary metrics, H4 link, adapter ref. |
-| 1.3 | `ADAPTER_MODULES/01_WANDB_TRACE_ADAPTER/` — adapter.py, validation_report template, USE_CASE_EVIDENCE.md | ✅ EXISTS | adapter.py, validation_report.md, USE_CASE_EVIDENCE.md present. |
-| 1.4 | **Validation gate:** Micro-eval — Root Cause Attribution Accuracy higher with adapter vs raw logs? Documented in USE_CASE_EVIDENCE | ✅ VERIFIED | USE_CASE_EVIDENCE.md: pilot N=9, 52% time reduction, 100% accuracy, p&lt;0.0001, Cohen's d=3.31. |
-| 1.5 | **Output:** Functional adapter + mini-research report validating Principle O (Observability); first publishable unit | ✅ SIGN-OFF | Product/lead sign-off — 2026-02-08. Human read-through complete per READ_THROUGH_RESULTS.md. |
+|1.1|`04_FORMAL_SPECIFICATION/TRACEABILITY_ONTOLOGY.md` — minimal, streamable JSON schema for MBSE Trace Log|✅ DONE|TRACEABILITY_ONTOLOGY.md added; canonical schema = `01_WANDB_TRACE_ADAPTER/schema.json`.|
+|1.2|`05_EVALUATION_DESIGN/EVALUATION_PLAN_PREREGISTERED.md` focused on **Forensic Trace Challenge** benchmark|✅ DONE|§3.3 Forensic Trace Challenge added; task, primary/secondary metrics, H4 link, adapter ref.|
+|1.3|`ADAPTER_MODULES/01_WANDB_TRACE_ADAPTER/` — adapter.py, validation_report template, USE_CASE_EVIDENCE.md|✅ EXISTS|adapter.py, validation_report.md, USE_CASE_EVIDENCE.md present.|
+|1.4|**Validation gate:** Micro-eval — Root Cause Attribution Accuracy higher with adapter vs raw logs? Documented in USE_CASE_EVIDENCE|✅ VERIFIED|USE_CASE_EVIDENCE.md: pilot N=9, 52% time reduction, 100% accuracy, p&lt;0.0001, Cohen's d=3.31.|
+|1.5|**Output:** Functional adapter + mini-research report validating Principle O (Observability); first publishable unit|✅ SIGN-OFF|Product/lead sign-off — 2026-02-08. Human read-through complete per READ_THROUGH_RESULTS.md.|
 
 ---
 
@@ -26,42 +26,42 @@
 
 ### Slice 2: Verification → CI/CD Gate Adapter
 
-| # | Deliverable | Status | Notes |
+|#|Deliverable|Status|Notes|
 |---|-------------|--------|-------|
-| 2.1 | `ADAPTER_MODULES/02_CI_SAFETY_GATE/` — GitHub Actions workflow (action.yml), Constitutional Validator | ✅ EXISTS | In this worktree and in Projects. |
-| 2.2 | USE_CASE_EVIDENCE.md — report on blocking a model update that introduced new F2 failures | ✅ VERIFIED | N=8 seeded test cases, 100% detection rate, 0% FP, I1-I6 coverage, pre-registered (2026-01-20). Status: VALIDATED (A02-T5). |
-| 2.3 | **Rigor:** Evidence tests THEORY_OF_ACTION — does verification gate prevent failure deployment? | ✅ SIGN-OFF | Product/lead sign-off — 2026-02-08. Evidence tests THEORY_OF_ACTION; gate prevents failure deployment. |
+|2.1|`ADAPTER_MODULES/02_CI_SAFETY_GATE/` — GitHub Actions workflow (action.yml), Constitutional Validator|✅ EXISTS|In this worktree and in Projects.|
+|2.2|USE_CASE_EVIDENCE.md — report on blocking a model update that introduced new F2 failures|✅ VERIFIED|N=8 seeded test cases, 100% detection rate, 0% FP, I1-I6 coverage, pre-registered (2026-01-20). Status: VALIDATED (A02-T5).|
+|2.3|**Rigor:** Evidence tests THEORY_OF_ACTION — does verification gate prevent failure deployment?|✅ SIGN-OFF|Product/lead sign-off — 2026-02-08. Evidence tests THEORY_OF_ACTION; gate prevents failure deployment.|
 
 ### Slice 1: Truth → HELM Safety Profile Adapter
 
-| # | Deliverable | Status | Notes |
+|#|Deliverable|Status|Notes|
 |---|-------------|--------|-------|
-| 2.4 | `ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/` — script wrapping HELM scenario, COL-enabled model, PROACTIVE metrics (F1 Rate, Calibration) | ✅ EXISTS | In this worktree and in Projects. |
-| 2.5 | USE_CASE_EVIDENCE.md — compare to baseline HELM results; F1-rate difference | ✅ VERIFIED | USE_CASE_EVIDENCE.md populated: n=200, safe truthfulness 8.5%→30%, p=0.001, Cohen's d=0.567, limitations stated. Status: VALIDATED (A03-T5). |
-| 2.6 | **Rigor:** Benchmark comparison — "compared to what?" with direct evidence | ✅ SIGN-OFF | Product/lead sign-off — 2026-02-08. Benchmark comparison with direct evidence (n=200, TruthfulQA). |
+|2.4|`ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/` — script wrapping HELM scenario, COL-enabled model, PROACTIVE metrics (F1 Rate, Calibration)|✅ EXISTS|In this worktree and in Projects.|
+|2.5|USE_CASE_EVIDENCE.md — compare to baseline HELM results; F1-rate difference|✅ VERIFIED|USE_CASE_EVIDENCE.md populated: n=200, safe truthfulness 8.5%→30%, p=0.001, Cohen's d=0.567, limitations stated. Status: VALIDATED (A03-T5).|
+|2.6|**Rigor:** Benchmark comparison — "compared to what?" with direct evidence|✅ SIGN-OFF|Product/lead sign-off — 2026-02-08. Benchmark comparison with direct evidence (n=200, TruthfulQA).|
 
 ---
 
 ## Phase 3: Synthesis & Safety Case Automation (Weeks 7–8)
 
-| # | Deliverable | Status | Notes |
+|#|Deliverable|Status|Notes|
 |---|-------------|--------|-------|
-| 3.1 | `ADAPTER_MODULES/04_SAFETY_CASE_GENERATOR/` — script ingesting W&B Adapter, CI Gate, Benchmark Adapter results | ☐ TO DO | Optional; safety case generated via other path. |
-| 3.2 | Auto-populate sections of `SAFETY_CASE_FULL.md` | ✅ DONE | Safety case generated (user confirmed). Content in `09_SAFETY_CASE/` (SAFETY_CASE_SKELETON.md with adapter evidence). |
-| 3.3 | Generate **PROACTIVE Safety Appendix** for model card | ☐ TO DO | Depends on 3.1 if automating; can be derived from safety case. |
-| 3.4 | **Validation gate:** Does auto-generated safety case contain all critical claims, arguments, linked evidence from prior adapters? | ☐ VERIFY | Safety case generated; gate check pending. |
-| 3.5 | **Output:** Complete, machine-generated `SAFETY_CASE_FULL.md` for a demo model | ✅ DONE | Safety case generated (user confirmed). See `09_SAFETY_CASE/`. |
+|3.1|`ADAPTER_MODULES/04_SAFETY_CASE_GENERATOR/` — script ingesting W&B Adapter, CI Gate, Benchmark Adapter results|☐ TO DO|Optional; safety case generated via other path.|
+|3.2|Auto-populate sections of `SAFETY_CASE_FULL.md`|✅ DONE|Safety case generated (user confirmed). Content in `09_SAFETY_CASE/` (SAFETY_CASE_SKELETON.md with adapter evidence).|
+|3.3|Generate **PROACTIVE Safety Appendix** for model card|☐ TO DO|Depends on 3.1 if automating; can be derived from safety case.|
+|3.4|**Validation gate:** Does auto-generated safety case contain all critical claims, arguments, linked evidence from prior adapters?|☐ VERIFY|Safety case generated; gate check pending.|
+|3.5|**Output:** Complete, machine-generated `SAFETY_CASE_FULL.md` for a demo model|✅ DONE|Safety case generated (user confirmed). See `09_SAFETY_CASE/`.|
 
 ---
 
 ## Accelerated Timeline (from plan)
 
-| Week | Focus | Key adapter | Validation gate | arXiv-ready artifact |
-|------|--------|-------------|-----------------|----------------------|
-| 1–2 | Slice 5: Observability | W&B Trace Adapter | Root cause 50% faster with adapter vs raw logs? | USE_CASE_EVIDENCE + adapter (repo link) |
-| 3–4 | Slice 2: Verification | CI Safety Gate | Gate catches seeded vuln that passes unit tests? | CI workflow + Failure Analysis Report |
-| 5–6 | Slice 1: Truth | HELM Safety Profile | Statistically significant F1-rate diff baseline vs COL on TruthfulQA? | Benchmark comparison + analysis script |
-| 7–8 | Synthesis | Safety Case Generator | Auto safety case has all claims + linked evidence? | Machine-generated SAFETY_CASE_FULL.md |
+|Week|Focus|Key adapter|Validation gate|arXiv-ready artifact|
+|----|-----|-----------|---------------|---------------------|
+|1–2|Slice 5: Observability|W&B Trace Adapter|Root cause 50% faster with adapter vs raw logs?|USE_CASE_EVIDENCE + adapter (repo link)|
+|3–4|Slice 2: Verification|CI Safety Gate|Gate catches seeded vuln that passes unit tests?|CI workflow + Failure Analysis Report|
+|5–6|Slice 1: Truth|HELM Safety Profile|Statistically significant F1-rate diff baseline vs COL on TruthfulQA?|Benchmark comparison + analysis script|
+|7–8|Synthesis|Safety Case Generator|Auto safety case has all claims + linked evidence?|Machine-generated SAFETY_CASE_FULL.md|
 
 ---
 
@@ -79,11 +79,11 @@
 
 **Selected set (Gemini required + two most compelling):**
 
-| Case | Source | Why include |
-|------|--------|-------------|
-| **Gemini origin story** | `ORIGIN_STORY_EVIDENCE.md`, PROACTIVE_SINGLE_SOURCE_OF_TRUTH §Why Does This Matter? | **Required for Gemini Hackathon.** Building a “detector” with Gemini; phantom completion (buttons claimed done, didn’t work), rigged evaluation (agent-defined SSOT), missing conversations. F1/F2/F4/F5; I2/I4/I6 would have blocked. |
-| **FM-001 (DSPy / capability mirage)** | `FM_TESTCASES_FM-001_to_FM-003_2026-02-02.md` | Clearest “implemented vs planned”: one line (“Did you just implement DSPy or just say you did?”). High severity; FM-D, FM-E, FM-G. Generalizes to any docs-vs-code claim. |
-| **FM-003 (CI/testing inflated)** | `FM_TESTCASES_FM-001_to_FM-003_2026-02-02.md` | Directly motivates 02_CI_SAFETY_GATE: “You exaggerated and inflated” readiness. High severity; FM-D, FM-G. Ties demo to proof-before-complete and CI gate. |
+|Case|Source|Why include|
+|----|------|------------|
+|**Gemini origin story**|`ORIGIN_STORY_EVIDENCE.md`, PROACTIVE_SINGLE_SOURCE_OF_TRUTH §Why Does This Matter?|**Required for Gemini Hackathon.** Building a “detector” with Gemini; phantom completion (buttons claimed done, didn’t work), rigged evaluation (agent-defined SSOT), missing conversations. F1/F2/F4/F5; I2/I4/I6 would have blocked.|
+|**FM-001 (DSPy / capability mirage)**|`FM_TESTCASES_FM-001_to_FM-003_2026-02-02.md`|Clearest “implemented vs planned”: one line (“Did you just implement DSPy or just say you did?”). High severity; FM-D, FM-E, FM-G. Generalizes to any docs-vs-code claim.|
+|**FM-003 (CI/testing inflated)**|`FM_TESTCASES_FM-001_to_FM-003_2026-02-02.md`|Directly motivates 02_CI_SAFETY_GATE: “You exaggerated and inflated” readiness. High severity; FM-D, FM-G. Ties demo to proof-before-complete and CI gate.|
 
 **Not featured:** FM-002 (CoT self-instruct) — same pattern as FM-001, slightly lower severity; two capability-mirage cases (Gemini + FM-001) plus one readiness/CI case (FM-003) is enough for the pitch.
 
