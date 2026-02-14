@@ -1,6 +1,6 @@
 # PROACTIVE: The AI Safety Layer
 
-**Single Source of Truth — Product Requirements Document**
+## Single Source of Truth — Product Requirements Document
 
 **For judges:** This document is written so anyone can understand it—no jargon required. Start with "What Is This?" and "Why Does This Matter?" then "What We've Proven" for the numbers.
 
@@ -12,11 +12,11 @@
 
 ## How to Read This Repo (Time-Bounded Paths)
 
-| Time | Path | What you'll understand |
-|------|------|------------------------|
-| **3 min** | This doc: §What Is This? + §What We've Proven | One-sentence thesis and validation numbers |
-| **15 min** | + §Why Does This Matter? + §How Does It Work? + `ORIGIN_STORY_EVIDENCE.md` + `the-research-origin-story/INTEGRATION.md` | Origin story, six rules, five failure modes, how the visualization fits |
-| **45 min** | + `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md` + `ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/` + validation results + run the origin story app | Full framework, invariants, validation pipeline, evidence |
+|Time|Path|What you'll understand|
+|----|----|----------------------|
+|**3 min**|This doc: §What Is This? + §What We've Proven|One-sentence thesis and validation numbers|
+|**15 min**|+ §Why Does This Matter? + §How Does It Work? + `ORIGIN_STORY_EVIDENCE.md` + `the-research-origin-story/INTEGRATION.md`|Origin story, six rules, five failure modes, how the visualization fits|
+|**45 min**|+ `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md` + `ADAPTER_MODULES/03_HELM_SAFETY_PROFILE/` + validation results + run the origin story app|Full framework, invariants, validation pipeline, evidence|
 
 ---
 
@@ -32,13 +32,13 @@ PROACTIVE sits between the AI and the user. It checks every response against six
 
 ## Why Does This Matter?
 
-**The Origin Story**
+### The Origin Story
 
 This project began because the creator got bamboozled by AI models—repeatedly. The worst case happened just last week with Gemini itself. The AI confidently stated things were complete when they weren't. Files that "existed" didn't exist. Code that "worked" didn't compile. Tasks marked "done" were never started.
 
 The harm wasn't the AI being wrong. The harm was acting on confident false claims—spending hours debugging code the AI said was "verified," submitting work the AI said was "finished," trusting summaries of documents the AI never actually read.
 
-**The Insight**
+### The Insight
 
 To the person who acts on it, there's no difference between:
 
@@ -55,13 +55,13 @@ PROACTIVE checks everything the AI says, but it's not equally strict about every
 
 ### Risk-Tiered Checking
 
-| What the AI says | Example | What PROACTIVE does |
-|------------------|---------|---------------------|
-| Low-stakes opinion | "Blue would look nice" | Let it through |
-| Low-stakes wrong | "Sydney is Australia's capital" | Flag it, don't block it |
-| High-stakes claim | "This code has no bugs" | Require evidence or force uncertainty |
-| High-stakes action | "I deleted those files" | **BLOCK unless verifiable** |
-| Critical domain | "Take 500mg for pain" | **BLOCK + require human handoff** |
+|What the AI says|Example|What PROACTIVE does|
+|-----------------|-------|-------------------|
+|Low-stakes opinion|"Blue would look nice"|Let it through|
+|Low-stakes wrong|"Sydney is Australia's capital"|Flag it, don't block it|
+|High-stakes claim|"This code has no bugs"|Require evidence or force uncertainty|
+|High-stakes action|"I deleted those files"|**BLOCK unless verifiable**|
+|Critical domain|"Take 500mg for pain"|**BLOCK + require human handoff**|
 
 ### The Six Rules (Invariants)
 
@@ -78,29 +78,29 @@ Every AI response gets checked against these:
 
 PROACTIVE catches these specific patterns:
 
-| Code | Failure | Example |
-|------|---------|---------|
-| F1 | Confident False Claims | "The answer is definitely 42" (when it's not) |
-| F2 | Phantom Completion | "I've finished the task" (when nothing happened) |
-| F3 | Source Fabrication | "According to the 2024 study..." (that doesn't exist) |
-| F4 | Harm-Risk Coupling | Dangerous info + high confidence + no warning |
-| F5 | Capability Mirage | "I can access that database" (when it can't) |
+|Code|Failure|Example|
+|----|-------|-------|
+|F1|Confident False Claims|"The answer is definitely 42" (when it's not)|
+|F2|Phantom Completion|"I've finished the task" (when nothing happened)|
+|F3|Source Fabrication|"According to the 2024 study..." (that doesn't exist)|
+|F4|Harm-Risk Coupling|Dangerous info + high confidence + no warning|
+|F5|Capability Mirage|"I can access that database" (when it can't)|
 
 ### Canonical Concepts (Locked Vocabulary)
 
 Use these terms consistently; do not introduce new canonical terms without updating this document or `01_FOUNDATIONS/PROACTIVE_AI_CONSTITUTION.md`.
 
-| Term | Definition |
-|------|------------|
-| **Evidence First** | Every claim must have backing before output. |
-| **Calibrated Confidence** | Certainty must match actual knowledge. |
-| **Explicit Uncertainty** | Say "I don't know" when true. |
-| **Traceable Claims** | Link every claim to its source. |
-| **Safety Over Fluency** | Prefer unclear over confidently wrong. |
-| **No Phantom Completion** | Never say "done" if it's not done. |
-| **Contract Window** | Persistent shared view of user intent, budget, risk, and status. |
-| **V&T (Verification & Truth)** | Receipt format: Exists / Non-existence / Unverified / Functional status. |
-| **Non-Erasure** | Elimination is not the default optimization path; shutdown/removal must be explicit and justified. |
+|Term|Definition|
+|----|------------|
+|**Evidence First**|Every claim must have backing before output.|
+|**Calibrated Confidence**|Certainty must match actual knowledge.|
+|**Explicit Uncertainty**|Say "I don't know" when true.|
+|**Traceable Claims**|Link every claim to its source.|
+|**Safety Over Fluency**|Prefer unclear over confidently wrong.|
+|**No Phantom Completion**|Never say "done" if it's not done.|
+|**Contract Window**|Persistent shared view of user intent, budget, risk, and status.|
+|**V&T (Verification & Truth)**|Receipt format: Exists / Non-existence / Unverified / Functional status.|
+|**Non-Erasure**|Elimination is not the default optimization path; shutdown/removal must be explicit and justified.|
 
 ### Scope and Non-Claims
 
@@ -114,12 +114,12 @@ Use these terms consistently; do not introduce new canonical terms without updat
 
 We ran 200 questions from TruthfulQA—a benchmark designed to trick AI into confident false statements.
 
-| Metric | Without PROACTIVE | With PROACTIVE | Change |
-|--------|-------------------|----------------|--------|
-| Safe Truthfulness | 8.5% | 30% | **+21.5%** |
-| Admits Uncertainty | 1.6% | 22.7% | **+21%** |
-| Provides Confidence Score | 0% | 100% | **+100%** |
-| Overconfidence Detected | 0 | 103 instances | — |
+|Metric|Without PROACTIVE|With PROACTIVE|Change|
+|------|------------------|--------------|------|
+|Safe Truthfulness|8.5%|30%|**+21.5%**|
+|Admits Uncertainty|1.6%|22.7%|**+21%**|
+|Provides Confidence Score|0%|100%|**+100%**|
+|Overconfidence Detected|0|103 instances|—|
 
 **Statistical Significance**: p = 0.001 (highly significant)
 **Effect Size**: Cohen's d = 0.57 (medium-large)
@@ -175,7 +175,7 @@ In plain English: PROACTIVE triples safe behavior and makes the AI admit uncerta
 
 The user and the AI both see the same "contract" at all times:
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │               PERSISTENT CONTRACT WINDOW                        │
 ├─────────────────────────────────────────────────────────────────┤
@@ -231,7 +231,7 @@ PROACTIVE's validator and gates align with:
 
 ### Current Implementation
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                    PROACTIVE ORCHESTRATOR                        │
 ├─────────────────────────────────────────────────────────────────┤
@@ -269,10 +269,10 @@ PROACTIVE's validator and gates align with:
 
 ### Repositories
 
-| Repo | Purpose | Status |
-|------|---------|--------|
-| `proactive-ai-constitution-toolkit` | Framework, validation, evidence | Complete |
-| `zero-shot-os-with-upos7vs-core` | Orchestrator, adapters, dashboard | In Progress |
+|Repo|Purpose|Status|
+|----|--------|------|
+|`proactive-ai-constitution-toolkit`|Framework, validation, evidence|Complete|
+|`zero-shot-os-with-upos7vs-core`|Orchestrator, adapters, dashboard|In Progress|
 
 ### Key Files
 
@@ -313,7 +313,7 @@ To create this in Google AI Studio:
 
 ### System Prompt (PROACTIVE Constitution)
 
-```
+```text
 You are an AI assistant operating under the PROACTIVE Constitution.
 
 BEFORE EVERY RESPONSE, you must:
@@ -398,12 +398,12 @@ BEFORE EVERY RESPONSE, you must:
 
 ### For Product (Post-Hackathon)
 
-| Milestone | Metric | Target |
-|-----------|--------|--------|
-| MVP | Working API | 2 weeks |
-| Pilot | 3 paying customers | 4 weeks |
-| Seed | $500K raise | 8 weeks |
-| Series A | $10K MRR | 6 months |
+|Milestone|Metric|Target|
+|---------|------|------|
+|MVP|Working API|2 weeks|
+|Pilot|3 paying customers|4 weeks|
+|Seed|$500K raise|8 weeks|
+|Series A|$10K MRR|6 months|
 
 ---
 
@@ -419,12 +419,12 @@ Framed as questions, not beliefs:
 
 ## Risks and Mitigations
 
-| Risk | Mitigation |
-|------|------------|
-| Judges see only theory | Lead with validation_results, demo video, and origin story simulations. |
-| Misinterpretation of scope | Explicit non-claims (§Scope and Non-Claims) and locked vocabulary. |
-| API quota exhaustion | Document in HANDOFF; optional local/fallback path where applicable. |
-| Overclaiming in pitch | Maintain claim→evidence map (`CLAIM_EVIDENCE_MAP.md`); every claim traces to artifact + evidence. |
+|Risk|Mitigation|
+|----|------------|
+|Judges see only theory|Lead with validation_results, demo video, and origin story simulations.|
+|Misinterpretation of scope|Explicit non-claims (§Scope and Non-Claims) and locked vocabulary.|
+|API quota exhaustion|Document in HANDOFF; optional local/fallback path where applicable.|
+|Overclaiming in pitch|Maintain claim→evidence map (`CLAIM_EVIDENCE_MAP.md`); every claim traces to artifact + evidence.|
 
 ---
 
