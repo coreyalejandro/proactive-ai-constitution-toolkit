@@ -1,5 +1,9 @@
 # PROACTIVE AI Constitution Research Toolkit
 
+> **Earlier toolkit (February 2026), kept for the record.** The current, tested PROACTIVE agent is
+> [coreyalejandro/28441830](https://github.com/coreyalejandro/28441830) (v4.1.1, 732 tests). The pilot numbers below come
+> from small synthetic case sets written by the author (N = 9 and N = 8); they are pilots, not validations.
+
 **A comprehensive framework for Constitutional AI safety research, from ideation to arXiv publication.**
 
 [![Status](https://img.shields.io/badge/Status-Active%20Development-yellow)]()
@@ -14,7 +18,7 @@ The PROACTIVE AI Constitution is a systematic framework for AI safety research t
 
 > **Reliability failures are safety failures.** When an AI system makes confident claims about reality that are false, and users must rely on those claims to act, the resulting harm is operationally indistinguishable from malice—regardless of intent.
 
-This toolkit provides everything needed to go from research idea to arXiv-ready publication, aligned with Anthropic's Responsible Scaling Policy and contemporary AI safety research standards.
+This toolkit provides everything needed to go from research idea to arXiv-ready publication.
 
 ---
 
@@ -312,7 +316,7 @@ The PROACTIVE framework includes adapter modules that integrate with external to
 
 - **52% reduction** in root cause attribution time vs. standard W&B tables
 - **100% accuracy** vs. 89% baseline accuracy
-- **Statistical significance**: p < 0.0001, Cohen's d = 3.31 (large effect)
+- Synthetic pilot, N = 9 author-written cases; too small for statistical claims (see the limits in the evidence file)
 
 See [USE_CASE_EVIDENCE.md](ADAPTER_MODULES/01_WANDB_TRACE_ADAPTER/USE_CASE_EVIDENCE.md) for full validation report.
 
